@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		E5F70FAC261F793C00550F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FAB261F793C00550F39 /* AppDelegate.swift */; };
 		E5F70FAE261F793C00550F39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FAD261F793C00550F39 /* SceneDelegate.swift */; };
-		E5F70FB0261F793C00550F39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FAF261F793C00550F39 /* ViewController.swift */; };
 		E5F70FB3261F793C00550F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F70FB1261F793C00550F39 /* Main.storyboard */; };
 		E5F70FB5261F793D00550F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5F70FB4261F793D00550F39 /* Assets.xcassets */; };
 		E5F70FB8261F793D00550F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */; };
+		E5F70FC4261F7A7900550F39 /* ToysListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FC3261F7A7900550F39 /* ToysListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5F70FA8261F793C00550F39 /* ToysNavigationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToysNavigationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F70FAB261F793C00550F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5F70FAD261F793C00550F39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E5F70FAF261F793C00550F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5F70FB2261F793C00550F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5F70FB4261F793D00550F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5F70FB7261F793D00550F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5F70FB9261F793D00550F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F70FC3261F7A7900550F39 /* ToysListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToysListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				E5F70FAB261F793C00550F39 /* AppDelegate.swift */,
 				E5F70FAD261F793C00550F39 /* SceneDelegate.swift */,
-				E5F70FAF261F793C00550F39 /* ViewController.swift */,
 				E5F70FB1261F793C00550F39 /* Main.storyboard */,
+				E5F70FC3261F7A7900550F39 /* ToysListViewController.swift */,
 				E5F70FB4261F793D00550F39 /* Assets.xcassets */,
 				E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */,
 				E5F70FB9261F793D00550F39 /* Info.plist */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5F70FB0261F793C00550F39 /* ViewController.swift in Sources */,
+				E5F70FC4261F7A7900550F39 /* ToysListViewController.swift in Sources */,
 				E5F70FAC261F793C00550F39 /* AppDelegate.swift in Sources */,
 				E5F70FAE261F793C00550F39 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.nikkochet.ToysNavigationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.nikkochet.ToysNavigationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
