@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Toys-->
         <scene sceneID="rit-vZ-QVT">
             <objects>
                 <tableViewController id="u6l-oH-9B4" customClass="ToysListViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GZu-Hj-X3H">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="GZu-Hj-X3H">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZu-Hj-X3H" id="Yan-es-xCc">
@@ -31,7 +31,10 @@
                             <outlet property="delegate" destination="u6l-oH-9B4" id="Vab-Ai-eQQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Fqv-SA-iU5"/>
+                    <navigationItem key="navigationItem" title="Toys" id="Fqv-SA-iU5"/>
+                    <connections>
+                        <segue destination="uY4-yU-NuN" kind="show" identifier="showDetails" id="Zgo-fm-Svs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsZ-tj-TL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,10 +50,11 @@
                         <viewLayoutGuide key="safeArea" id="e2I-LG-oT2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GAS-Zl-wP8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pW-cg-G49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="-199"/>
+            <point key="canvasLocation" x="465" y="-210"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVb-Du-upv">
