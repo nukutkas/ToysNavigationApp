@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DBd-7u-MdB">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,15 +13,15 @@
             <objects>
                 <tableViewController id="u6l-oH-9B4" customClass="ToyListViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xH5-pZ-MPD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="GZu-Hj-X3H">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZu-Hj-X3H" id="Yan-es-xCc">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -31,7 +31,13 @@
                             <outlet property="delegate" destination="u6l-oH-9B4" id="Vab-Ai-eQQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Toys" id="Fqv-SA-iU5"/>
+                    <navigationItem key="navigationItem" title="Toys" id="Fqv-SA-iU5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tkh-m7-sy2">
+                            <connections>
+                                <segue destination="Qu8-j2-y3r" kind="presentation" modalPresentationStyle="fullScreen" id="Uws-lW-q70"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="uY4-yU-NuN" kind="show" identifier="showDetails" id="vlK-KR-FgV"/>
                     </connections>
@@ -45,10 +51,22 @@
             <objects>
                 <viewController id="uY4-yU-NuN" customClass="ToyDetailsViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fOG-sr-XeU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-hW-T3v">
+                                <rect key="frame" x="145" y="124" width="85" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="e2I-LG-oT2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zJc-hW-T3v" firstAttribute="centerX" secondItem="fOG-sr-XeU" secondAttribute="centerX" id="Biw-fn-rlo"/>
+                            <constraint firstItem="zJc-hW-T3v" firstAttribute="top" secondItem="e2I-LG-oT2" secondAttribute="top" constant="80" id="ti1-ju-eqV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Toy Details" id="GAS-Zl-wP8">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fXu-ZP-pVX">
@@ -62,27 +80,60 @@
             </objects>
             <point key="canvasLocation" x="465" y="-210"/>
         </scene>
-        <!--View Controller-->
+        <!--Toy Manager View Controller-->
         <scene sceneID="gvl-ME-YA8">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Qu8-j2-y3r" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Qu8-j2-y3r" customClass="ToyManagerViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdW-Jc-hhJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHk-AA-nKR">
+                                <rect key="frame" x="37.5" y="80" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="eYc-lS-3cc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="595-6p-aLt">
+                                <rect key="frame" x="142" y="281.5" width="91" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4j-1p-k9F">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-FH-AvF">
+                                        <rect key="frame" x="0.0" y="56" width="91" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4cP-NF-cz4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="595-6p-aLt" firstAttribute="centerX" secondItem="cdW-Jc-hhJ" secondAttribute="centerX" id="C36-Pd-jGL"/>
+                            <constraint firstItem="hHk-AA-nKR" firstAttribute="centerX" secondItem="cdW-Jc-hhJ" secondAttribute="centerX" id="QlN-YX-tRF"/>
+                            <constraint firstItem="hHk-AA-nKR" firstAttribute="top" secondItem="4cP-NF-cz4" secondAttribute="top" constant="80" id="Sso-Ba-D9Z"/>
+                            <constraint firstItem="595-6p-aLt" firstAttribute="centerY" secondItem="cdW-Jc-hhJ" secondAttribute="centerY" id="xF8-rV-uLG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYG-qk-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="-210"/>
+            <point key="canvasLocation" x="114" y="656"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVb-Du-upv">
             <objects>
                 <navigationController id="DBd-7u-MdB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uY5-mc-C9w">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -94,9 +145,15 @@
             <point key="canvasLocation" x="-1223" y="-210"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i9f-2B-UpL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

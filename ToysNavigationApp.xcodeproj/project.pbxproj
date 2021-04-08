@@ -14,6 +14,7 @@
 		E5F70FB8261F793D00550F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */; };
 		E5F70FC4261F7A7900550F39 /* ToyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FC3261F7A7900550F39 /* ToyListViewController.swift */; };
 		E5F70FC9261F82F700550F39 /* ToyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FC8261F82F700550F39 /* ToyDetailsViewController.swift */; };
+		E5F70FCD261F8C6B00550F39 /* ToyManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F70FCC261F8C6B00550F39 /* ToyManagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E5F70FB9261F793D00550F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5F70FC3261F7A7900550F39 /* ToyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyListViewController.swift; sourceTree = "<group>"; };
 		E5F70FC8261F82F700550F39 /* ToyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyDetailsViewController.swift; sourceTree = "<group>"; };
+		E5F70FCC261F8C6B00550F39 /* ToyManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyManagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E5F70FB1261F793C00550F39 /* Main.storyboard */,
 				E5F70FC8261F82F700550F39 /* ToyDetailsViewController.swift */,
 				E5F70FC3261F7A7900550F39 /* ToyListViewController.swift */,
+				E5F70FCC261F8C6B00550F39 /* ToyManagerViewController.swift */,
 				E5F70FB4261F793D00550F39 /* Assets.xcassets */,
 				E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */,
 				E5F70FB9261F793D00550F39 /* Info.plist */,
@@ -142,6 +145,7 @@
 			files = (
 				E5F70FC4261F7A7900550F39 /* ToyListViewController.swift in Sources */,
 				E5F70FAC261F793C00550F39 /* AppDelegate.swift in Sources */,
+				E5F70FCD261F8C6B00550F39 /* ToyManagerViewController.swift in Sources */,
 				E5F70FC9261F82F700550F39 /* ToyDetailsViewController.swift in Sources */,
 				E5F70FAE261F793C00550F39 /* SceneDelegate.swift in Sources */,
 			);
