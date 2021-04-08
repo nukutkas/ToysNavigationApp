@@ -38,5 +38,12 @@ class ToyListViewController: UITableViewController {
         performSegue(withIdentifier: "showDetails", sender: toy)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-   
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let toyDetailsVC = segue.destination as! ToyDetailsViewController
+            toyDetailsVC.toyName = sender as? String
+            
+        }
+    }
 }

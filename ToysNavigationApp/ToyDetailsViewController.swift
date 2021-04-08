@@ -8,11 +8,15 @@
 import UIKit
 
 class ToyDetailsViewController: UIViewController {
-
+    
+    @IBOutlet var toyNameLabel: UILabel!
+    
+    var toyName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        toyNameLabel.text = toyName
 
-        // Do any additional setup after loading the view.
     }
     
 

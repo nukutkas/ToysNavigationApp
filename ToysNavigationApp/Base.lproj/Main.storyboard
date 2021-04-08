@@ -75,6 +75,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toyNameLabel" destination="zJc-hW-T3v" id="Bck-jC-lSj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pW-cg-G49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +113,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelAction" destination="Qu8-j2-y3r" eventType="touchUpInside" id="z1B-6T-eiV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -123,6 +129,10 @@
                             <constraint firstItem="595-6p-aLt" firstAttribute="centerY" secondItem="cdW-Jc-hhJ" secondAttribute="centerY" id="xF8-rV-uLG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editToyButton" destination="P4j-1p-k9F" id="40o-A3-2er"/>
+                        <outlet property="toyNameTexfField" destination="hHk-AA-nKR" id="HAV-eH-kun"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYG-qk-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
