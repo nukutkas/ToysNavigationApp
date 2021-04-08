@@ -11,7 +11,7 @@
         <!--Toys-->
         <scene sceneID="rit-vZ-QVT">
             <objects>
-                <tableViewController id="u6l-oH-9B4" customClass="ToysListViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u6l-oH-9B4" customClass="ToyListViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xH5-pZ-MPD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,28 +33,49 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Toys" id="Fqv-SA-iU5"/>
                     <connections>
-                        <segue destination="uY4-yU-NuN" kind="show" identifier="showDetails" id="Zgo-fm-Svs"/>
+                        <segue destination="uY4-yU-NuN" kind="show" identifier="showDetails" id="vlK-KR-FgV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XsZ-tj-TL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-333" y="-210"/>
         </scene>
-        <!--View Controller-->
+        <!--Toy Details-->
         <scene sceneID="V1F-ux-Usu">
             <objects>
-                <viewController id="uY4-yU-NuN" sceneMemberID="viewController">
+                <viewController id="uY4-yU-NuN" customClass="ToyDetailsViewController" customModule="ToysNavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fOG-sr-XeU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="e2I-LG-oT2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GAS-Zl-wP8"/>
+                    <navigationItem key="navigationItem" title="Toy Details" id="GAS-Zl-wP8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fXu-ZP-pVX">
+                            <connections>
+                                <segue destination="Qu8-j2-y3r" kind="presentation" id="i9f-2B-UpL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pW-cg-G49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="-210"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gvl-ME-YA8">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Qu8-j2-y3r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdW-Jc-hhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4cP-NF-cz4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYG-qk-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-210"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVb-Du-upv">

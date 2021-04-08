@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ToysListViewController: UITableViewController {
+class ToyListViewController: UITableViewController {
     
     var toys = ["Bear", "Car"]
     
@@ -30,6 +30,13 @@ class ToysListViewController: UITableViewController {
         cell.textLabel?.text = toys[indexPath.row]
         
         return cell
+    }
+  
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let toy = toys[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: toy)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
    
 }
