@@ -14,12 +14,14 @@ class ToyManagerViewController: UIViewController {
     @IBOutlet var newToyButton: UIButton!
     
     var editModeIsOn = false
+    var toyName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         newToyButton.isHidden = editModeIsOn ? true : false
         editToyButton.isHidden = editModeIsOn ? false : true
+        toyNameTexfField.text = toyName
         
     }
     

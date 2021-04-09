@@ -34,7 +34,7 @@
                     <navigationItem key="navigationItem" title="Toys" id="Fqv-SA-iU5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tkh-m7-sy2">
                             <connections>
-                                <segue destination="Qu8-j2-y3r" kind="presentation" modalPresentationStyle="fullScreen" id="Uws-lW-q70"/>
+                                <segue destination="Qu8-j2-y3r" kind="presentation" modalPresentationStyle="fullScreen" id="Hpq-oi-ppR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,7 +71,7 @@
                     <navigationItem key="navigationItem" title="Toy Details" id="GAS-Zl-wP8">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fXu-ZP-pVX">
                             <connections>
-                                <segue destination="Qu8-j2-y3r" kind="presentation" id="i9f-2B-UpL"/>
+                                <segue destination="Qu8-j2-y3r" kind="presentation" modalPresentationStyle="fullScreen" id="tYC-BK-nb5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,15 +102,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="595-6p-aLt">
                                 <rect key="frame" x="142" y="253.5" width="91" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4j-1p-k9F">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-Jd-XKg">
                                         <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Save"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <segue destination="YXo-vY-eC2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="JBm-rz-K21"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJK-Jd-XKg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4j-1p-k9F">
                                         <rect key="frame" x="0.0" y="56" width="91" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="YXo-vY-eC2" kind="unwind" unwindAction="unwindSegueWithSegue:" id="JF2-db-Z3J"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ5-FH-AvF">
                                         <rect key="frame" x="0.0" y="112" width="91" height="48"/>
@@ -118,9 +124,6 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
-                                        <connections>
-                                            <action selector="cancelAction" destination="Qu8-j2-y3r" eventType="touchUpInside" id="z1B-6T-eiV"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -135,14 +138,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="editToyButton" destination="P4j-1p-k9F" id="40o-A3-2er"/>
-                        <outlet property="newToyButton" destination="pJK-Jd-XKg" id="tY5-jO-LTB"/>
+                        <outlet property="editToyButton" destination="pJK-Jd-XKg" id="Plc-qN-kkd"/>
+                        <outlet property="newToyButton" destination="P4j-1p-k9F" id="fbC-IY-96O"/>
                         <outlet property="toyNameTexfField" destination="hHk-AA-nKR" id="HAV-eH-kun"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZYG-qk-acI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="YXo-vY-eC2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="114" y="656"/>
+            <point key="canvasLocation" x="218" y="613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVb-Du-upv">
@@ -162,7 +166,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i9f-2B-UpL"/>
+        <segue reference="Hpq-oi-ppR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
