@@ -41,6 +41,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5A90D9E264B14D9002032B0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E5F70FB4261F793D00550F39 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E5A90D9F264B14EE002032B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5F70FC3261F7A7900550F39 /* ToyListViewController.swift */,
+				E5F70FC8261F82F700550F39 /* ToyDetailsViewController.swift */,
+				E5F70FCC261F8C6B00550F39 /* ToyManagerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E5A90DA1264B1500002032B0 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				E5F70FAB261F793C00550F39 /* AppDelegate.swift */,
+				E5F70FAD261F793C00550F39 /* SceneDelegate.swift */,
+				E5F70FB9261F793D00550F39 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		E5A90DA3264B150F002032B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E5F70FB1261F793C00550F39 /* Main.storyboard */,
+				E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		E5F70F9F261F793C00550F39 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +97,10 @@
 		E5F70FAA261F793C00550F39 /* ToysNavigationApp */ = {
 			isa = PBXGroup;
 			children = (
-				E5F70FAB261F793C00550F39 /* AppDelegate.swift */,
-				E5F70FAD261F793C00550F39 /* SceneDelegate.swift */,
-				E5F70FB1261F793C00550F39 /* Main.storyboard */,
-				E5F70FC3261F7A7900550F39 /* ToyListViewController.swift */,
-				E5F70FC8261F82F700550F39 /* ToyDetailsViewController.swift */,
-				E5F70FCC261F8C6B00550F39 /* ToyManagerViewController.swift */,
-				E5F70FB4261F793D00550F39 /* Assets.xcassets */,
-				E5F70FB6261F793D00550F39 /* LaunchScreen.storyboard */,
-				E5F70FB9261F793D00550F39 /* Info.plist */,
+				E5A90DA3264B150F002032B0 /* Storyboards */,
+				E5A90D9F264B14EE002032B0 /* ViewControllers */,
+				E5A90D9E264B14D9002032B0 /* Source */,
+				E5A90DA1264B1500002032B0 /* Supporting files */,
 			);
 			path = ToysNavigationApp;
 			sourceTree = "<group>";
